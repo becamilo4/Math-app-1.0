@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Muli', sans-serif;
+}
+
+body{
+    background: #648381;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header__container header__container header__container"
+                "main__container main__container main__container"
+                "main__footer main__footer main__footer";
+    min-height: 320px
+}
+
+.container .header__container{
+    grid-area: header__container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #575761;
+}
+
+.header__container .header__title{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.header__container .header--category{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.header--category a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.header--category a:hover{
+    text-decoration: overline;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container .main__container-cajas{
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "main__container--precio-producto main__container--precio-producto main__container--precio-producto"
+    "main__container--descuento-producto main__container--descuento-producto main__container--descuento-producto"
+}
+
+.container .main__container--precio-producto{
+    grid-area: main__container--precio-producto;
+}
+
+.container .main__container--descuento-producto{
+    grid-area: main__container--descuento-producto;
+}
+
+.container .main__container{
+    grid-area: main__container;
+}
+
+.container .main__footer{
+    grid-area: main__footer;
+}
